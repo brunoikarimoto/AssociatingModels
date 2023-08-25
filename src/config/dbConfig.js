@@ -1,6 +1,6 @@
+require('dotenv').config({path: __dirname + '/.env'});
 const mongoose = require('mongoose');
-
-const dbConfig = "mongodb+srv://brunoikarimoto:coxinha123@cluster0.fxho0xm.mongodb.net/Exercicio?retryWrites=true&w=majority";
+const dbConfig = process.env.MONGO;
 
 const conexao = mongoose.connect(dbConfig, {
     useNewUrlParser: true,
